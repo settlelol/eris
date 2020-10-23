@@ -48,6 +48,8 @@ declare namespace Eris {
     getMessages(limit?: number, before?: string, after?: string, around?: string): Promise<Message[]>;
     getPins(): Promise<Message[]>;
     createMessage(content: MessageContent, file?: MessageFile | MessageFile[]): Promise<Message>;
+    sendError(content: MessageContent, file?: MessageFile | MessageFile[]): Promise<Message>;
+    sendSuccess(content: MessageContent, file?: MessageFile | MessageFile[]): Promise<Message>;
     editMessage(messageID: string, content: MessageContent): Promise<Message>;
     pinMessage(messageID: string): Promise<void>;
     unpinMessage(messageID: string): Promise<void>;
